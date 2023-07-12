@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
+import { initializeApp } from "@firebase/app";
+import { getStorage, ref, listAll, getDownloadURL } from "@firebase/storage";
 
 export type Icons = {
   url: string;
