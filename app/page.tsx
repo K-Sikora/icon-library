@@ -1,9 +1,5 @@
-import { Button } from "@/components/ui/button";
-
-export default function Home() {
+export default async function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Button variant="secondary">hello</Button>
-    </main>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
   );
 }
