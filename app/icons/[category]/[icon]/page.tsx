@@ -32,20 +32,20 @@ const IconPage = async ({
   const icon = await getFileByName(params.category, params.icon);
 
   return (
-    <div className="flex flex-col gap-12 min-h-screen items-center justify-center -mt-20">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-12 -mt-20">
       <div
         key={icon.name}
-        className="bg-gray-100 border-2 hover:border-indigo-800 duration-300 hover:bg-gray-200 shadow-md flex rounded-md flex-col items-center justify-center h-36 w-36 gap-2"
+        className="flex flex-col items-center justify-center gap-2 duration-300 bg-gray-100 border-2 rounded-md shadow-md hover:border-indigo-800 hover:bg-gray-200 h-36 w-36"
       >
         <img
           className="w-1/3 h-1/3"
           src={icon.url}
         />
-        <h3 className="text-sm truncate w-full px-3 h-6 font-medium text-center">
+        <h3 className="w-full h-6 px-3 text-sm font-medium text-center truncate">
           {icon.name}
         </h3>
       </div>
-      <div className="flex gap-2 flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-center justify-center gap-2">
         <DownloadButton icon={icon} />
         <CopyUrlButton
           url={icon.url}

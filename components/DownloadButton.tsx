@@ -37,7 +37,7 @@ const DownloadButton = (props: Props) => {
   return (
     <Button
       variant="default"
-      className="flex rounded-md h-9 border items-center justify-center gap-1"
+      className="flex items-center justify-center gap-1 border rounded-md h-9"
       onClick={handleDownload}
     >
       Download

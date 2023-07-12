@@ -29,19 +29,13 @@ const CopyUrlButton = (props: Props) => {
           <AiFillCopy size={18} />
         </MenubarTrigger>
         <MenubarContent>
-          <MenubarItem
-            className="cursor-pointer"
-            onClick={handleCopyUrl}
-          >
+          <MenubarItem className="cursor-pointer" onClick={handleCopyUrl}>
             Copy URL
             <MenubarShortcut>
               <AiOutlineLink size={18} />
             </MenubarShortcut>
           </MenubarItem>
-          <MenubarItem
-            className="cursor-pointer"
-            onClick={handleCopyName}
-          >
+          <MenubarItem className="cursor-pointer" onClick={handleCopyName}>
             Copy name
             <MenubarShortcut>
               <BiText size={18} />

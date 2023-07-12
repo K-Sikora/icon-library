@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { initializeApp } from "@firebase/app";
+import { getStorage, ref, getDownloadURL } from "@firebase/storage";
 
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
