@@ -15,13 +15,13 @@ const Icon = (props: Props) => {
     <Link
       href={`/icons/${category}/${icon.name}`}
       key={icon.name}
-      className="bg-gray-100 border-2 hover:border-indigo-800 duration-300 hover:bg-gray-200 shadow-md flex rounded-md flex-col items-center justify-center aspect-square gap-2"
+      className="flex flex-col items-center justify-center gap-2 duration-300 bg-gray-100 border-2 rounded-md shadow-md hover:border-indigo-800 hover:bg-gray-200 aspect-square"
     >
       <img
         className="w-7 h-7 xl:w-8 xl:h-8"
         src={icon.url}
       />
-      <h3 className="text-xs truncate w-full px-3 h-4 font-medium text-center">
+      <h3 className="w-full h-4 px-3 text-xs font-medium text-center truncate">
         {icon.name}
       </h3>
     </Link>

@@ -2,28 +2,49 @@
 import { Icons } from "@/app/services/getIcons";
 import React, { useState } from "react";
 import Icon from "./Icon";
+import { buttonVariants } from "@/components/ui/button";
+
 import { Input } from "../ui/input";
 import { BiSearch } from "react-icons/bi";
+import { categories } from "@/app/icons/[category]/[icon]/page";
+import Link from "next/link";
 type Props = {
   icons: Icons[];
+  category: string;
 };
 
 const IconContainer = (props: Props) => {
-  const { icons } = props;
+  const { icons, category } = props;
   const [query, setQuery] = useState("");
   return (
     <>
-      <div className="relative w-full">
+      <div className="relative flex flex-col w-full gap-6">
         <Input
-          className="border-2 pr-10"
+          className="pr-10 border-2"
+          placeholder={`Search ${category} icons...`}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <div className="w-12 h-12 flex items-center justify-center absolute right-0 top-0">
+
+        <div className="absolute top-0 right-0 flex items-center justify-center w-12 h-12">
           <BiSearch size={22} />
         </div>
+        <nav>
+          <nav className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <Link
+                className={`${buttonVariants({
+                  variant: "default",
+                })} capitalize`}
+                href={`${category}`}
+              >
+                {category}
+              </Link>
+            ))}
+          </nav>
+        </nav>
       </div>
-      <div className="min-h-screen grid grid-cols-3 place-content-start sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-4 max-w-screen-xl w-full xl:mx-auto">
+      <div className="grid w-full max-w-screen-xl min-h-screen grid-cols-3 gap-4 place-content-start sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 xl:mx-auto">
         {icons
           .filter((icon) =>
             icon.name.toLowerCase().includes(query.toLowerCase())

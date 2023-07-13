@@ -1,9 +1,12 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const fira_sans = Fira_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,11 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${fira_sans.className}`}>
         <Navbar />
-        <div className="px-4 md:px-8 max-w-screen-xl mx-auto w-full">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );

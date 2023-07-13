@@ -22,11 +22,14 @@ const IconsPage = async (props: Props) => {
   const icons = await getIcons(category);
 
   return (
-    <main className="py-24 flex flex-col gap-6">
+    <main className="flex flex-col max-w-screen-xl gap-6 px-4 py-24 mx-auto md:px-8">
       <h5 className="font-semibold">
-        Browse through {icons.length} {category} icons
+        Browse {icons.length} {category} icons
       </h5>
-      <IconContainer icons={icons}></IconContainer>
+      <IconContainer
+        category={category}
+        icons={icons}
+      ></IconContainer>
     </main>
   );
 };

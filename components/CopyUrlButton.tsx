@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import {
   Menubar,
   MenubarContent,
@@ -24,18 +24,29 @@ const CopyUrlButton = (props: Props) => {
   return (
     <Menubar>
       <MenubarMenu>
-        <MenubarTrigger className="px-8 cursor-pointer flex gap-1 items-center justify-center">
+        <MenubarTrigger
+          className={`${buttonVariants({
+            variant: "outline",
+            size: "lg",
+          })} h-10 cursor-pointer`}
+        >
           Copy
           <AiFillCopy size={18} />
         </MenubarTrigger>
         <MenubarContent>
-          <MenubarItem className="cursor-pointer" onClick={handleCopyUrl}>
+          <MenubarItem
+            className="cursor-pointer"
+            onClick={handleCopyUrl}
+          >
             Copy URL
             <MenubarShortcut>
               <AiOutlineLink size={18} />
             </MenubarShortcut>
           </MenubarItem>
-          <MenubarItem className="cursor-pointer" onClick={handleCopyName}>
+          <MenubarItem
+            className="cursor-pointer"
+            onClick={handleCopyName}
+          >
             Copy name
             <MenubarShortcut>
               <BiText size={18} />
