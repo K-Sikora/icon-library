@@ -29,7 +29,7 @@ const IconPage = async ({
   const icon = await getFileByName(params.category, params.icon);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-12 py-12">
+    <div className="flex flex-col items-center justify-center gap-12 px-4 py-12 md:px-8">
       <GoBack />
       <div
         key={icon.name}
@@ -37,7 +37,7 @@ const IconPage = async ({
       >
         <img
           alt={`${icon.name} icon`}
-          className="w-1/3 h-1/3"
+          className="w-2/3"
           src={icon.url}
         />
         <h3 className="w-full h-6 px-3 text-sm font-medium text-center truncate">

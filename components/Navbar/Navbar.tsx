@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/menubar";
 import { HiChevronDown } from "react-icons/hi";
 import { AiFillGithub } from "react-icons/ai";
-import { PiDetectiveFill } from "react-icons/pi";
+import { BiSolidBinoculars } from "react-icons/bi";
 import { categories } from "@/app/icons/[category]/[icon]/page";
 const Navbar = () => {
   return (
@@ -48,8 +48,7 @@ const Navbar = () => {
             href="/"
             className="flex items-center justify-center gap-2 text-xl italic font-bold"
           >
-            just_icons
-            <PiDetectiveFill size={24} />
+            <BiSolidBinoculars size={36} />
           </Link>
         </div>
         <div className="flex items-center justify-end w-1/3">

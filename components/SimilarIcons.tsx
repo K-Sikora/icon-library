@@ -19,22 +19,27 @@ const SimilarIcons = async ({ currentIconName }: SimilarIconsProps) => {
   }
 
   const similarIcons = await getSimilarIcons(similarIconNames);
-  return (
-    <div className="flex flex-col items-center gap-4 mt-12">
-      <h2 className="mb-4 text-2xl font-bold">Similar Icons</h2>
-      <div className="flex flex-wrap items-center justify-center w-full max-w-screen-xl gap-4 mx-auto">
-        {similarIcons.map((icon: Icon) => (
-          <>
-            <Icon
-              category={icon.category}
-              icon={icon}
-              key={icon.url}
-            />
-          </>
-        ))}
+  if (similarIcons.length > 1) {
+    return (
+      <div className="flex flex-col items-center gap-4 mt-12">
+        <h2 className="mb-4 text-3xl font-semibold text-white">
+          Similar Icons
+        </h2>
+        <div className="grid w-full max-w-screen-xl grid-cols-3 gap-4 place-content-start sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 xl:mx-auto">
+          {similarIcons.map(
+            (similarIcon: Icon) =>
+              currentIconName !== similarIcon.name && (
+                <Icon
+                  category={similarIcon.category}
+                  icon={similarIcon}
+                  key={similarIcon.url}
+                />
+              )
+          )}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 const getSimilarIcons = async (similarIconNames: string[]): Promise<Icon[]> => {
