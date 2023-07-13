@@ -3,9 +3,8 @@ import { Icons, getIcons } from "@/app/services/getIcons";
 import CopyUrlButton from "@/components/CopyUrlButton";
 import DownloadButton from "@/components/DownloadButton";
 import GoBack from "@/components/GoBack";
-import React from "react";
-
 export const categories = ["solid", "brand", "outline", "social"];
+
 export const dynamicParams = false;
 export async function generateStaticParams() {
   const allIcons: Icons[] = [];
@@ -29,11 +28,11 @@ const IconPage = async ({
   const icon = await getFileByName(params.category, params.icon);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-12">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-12 -mt-20">
       <GoBack />
       <div
         key={icon.name}
-        className="flex flex-col items-center justify-center gap-2 duration-300 bg-gray-100 border-2 rounded-md shadow-md hover:border-indigo-800 hover:bg-gray-200 h-36 w-36"
+        className="flex flex-col items-center justify-center gap-2 duration-300 bg-[#695BFF]/30 border-2 rounded-md shadow-md h-36 w-36"
       >
         <img
           alt={`${icon.name} icon`}
@@ -51,6 +50,7 @@ const IconPage = async ({
         />
         <DownloadButton icon={icon} />
       </div>
+      <div>similar</div>
     </div>
   );
 };

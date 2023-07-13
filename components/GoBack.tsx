@@ -2,16 +2,16 @@
 
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
-
-type Props = {};
-
-const GoBack = (props: Props) => {
+import { AiOutlineArrowLeft } from "react-icons/ai";
+const GoBack = () => {
   const router = useRouter();
   return (
     <Button
       onClick={() => router.back()}
       variant="link"
+      className="flex items-center gap-1 text-base text-white"
     >
+      <AiOutlineArrowLeft />
       Go back
     </Button>
   );

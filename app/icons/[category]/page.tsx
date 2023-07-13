@@ -23,7 +23,7 @@ const IconsPage = async (props: Props) => {
 
   return (
     <main className="flex flex-col max-w-screen-xl gap-6 px-4 py-24 mx-auto md:px-8">
-      <h5 className="font-semibold">
+      <h5 className="font-semibold text-white">
         Browse {icons.length} {category} icons
       </h5>
       <IconContainer

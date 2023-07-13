@@ -16,8 +16,8 @@ const categories = [
 ];
 export default async function Home() {
   return (
-    <main className="relative flex flex-col items-center text-center mx-auto px-4 md:px-20 w-full justify-center min-h-screen gap-12 py-36 bg-[url('/homepage-icons/bg-landing.svg')] bg-no-repeat bg-cover">
-      <h2 className="text-5xl font-extrabold text-primary">
+    <main className="relative flex flex-col items-center justify-center w-full min-h-screen gap-12 px-4 mx-auto -mt-20 text-center md:px-20 py-36">
+      <h2 className="text-3xl font-extrabold md:text-5xl text-primary">
         Library of vector icons
       </h2>
       <div className="flex flex-wrap items-center justify-center gap-4">
@@ -26,7 +26,7 @@ export default async function Home() {
             <Link
               href={`/icons/${category.name}`}
               className={`${buttonVariants({
-                variant: "outline",
+                variant: "default",
                 size: "lg",
               })} h-10 cursor-pointer capitalize`}
             >

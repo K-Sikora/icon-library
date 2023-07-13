@@ -8,6 +8,7 @@ import { Input } from "../ui/input";
 import { BiSearch } from "react-icons/bi";
 import { categories } from "@/app/icons/[category]/[icon]/page";
 import Link from "next/link";
+import IconNavLink from "./IconNavLink";
 type Props = {
   icons: Icons[];
   category: string;
@@ -20,7 +21,7 @@ const IconContainer = (props: Props) => {
     <>
       <div className="relative flex flex-col w-full gap-6">
         <Input
-          className="pr-10 border-2"
+          className="pr-10 bg-gray-100 border-2"
           placeholder={`Search ${category} icons...`}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -29,19 +30,13 @@ const IconContainer = (props: Props) => {
         <div className="absolute top-0 right-0 flex items-center justify-center w-12 h-12">
           <BiSearch size={22} />
         </div>
-        <nav>
-          <nav className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <Link
-                className={`${buttonVariants({
-                  variant: "default",
-                })} capitalize`}
-                href={`${category}`}
-              >
-                {category}
-              </Link>
-            ))}
-          </nav>
+        <nav className="flex flex-wrap gap-2">
+          {categories.map((category) => (
+            <IconNavLink
+              key={category}
+              category={category}
+            />
+          ))}
         </nav>
       </div>
       <div className="grid w-full max-w-screen-xl min-h-screen grid-cols-3 gap-4 place-content-start sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 xl:mx-auto">
