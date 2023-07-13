@@ -32,6 +32,5 @@ export async function getIcons(category: string) {
     })
   );
 
-  console.log(icons);
   return icons;
 }

@@ -3,6 +3,7 @@ import { Icons, getIcons } from "@/app/services/getIcons";
 import CopyUrlButton from "@/components/CopyUrlButton";
 import DownloadButton from "@/components/DownloadButton";
 import GoBack from "@/components/GoBack";
+import SimilarIcons from "@/components/SimilarIcons";
 export const categories = ["solid", "brand", "outline", "social"];
 
 export const dynamicParams = false;
@@ -28,7 +29,7 @@ const IconPage = async ({
   const icon = await getFileByName(params.category, params.icon);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-12 -mt-20">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-12 py-12">
       <GoBack />
       <div
         key={icon.name}
@@ -50,7 +51,7 @@ const IconPage = async ({
         />
         <DownloadButton icon={icon} />
       </div>
-      <div>similar</div>
+      <SimilarIcons currentIconName={icon.name} />
     </div>
   );
 };
