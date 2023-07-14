@@ -1,5 +1,5 @@
 "use client";
-import { Button, buttonVariants } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 import {
   Menubar,
   MenubarContent,
