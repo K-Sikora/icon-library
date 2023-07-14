@@ -1,5 +1,6 @@
 import { getIcons } from "@/app/services/getIcons";
 import Icon from "./Icons/Icon";
+import { categories } from "@/app/constants";
 
 type Icon = {
   name: string;
@@ -45,10 +46,8 @@ const SimilarIcons = async ({ currentIconName }: SimilarIconsProps) => {
 const getSimilarIcons = async (similarIconNames: string[]): Promise<Icon[]> => {
   const allIcons: Icon[] = [];
 
-  const categories = ["outline", "solid", "brand", "social"];
-
   for (const category of categories) {
-    const categoryIcons = await getIcons(category);
+    const categoryIcons = await getIcons(category.name);
     const similarIcons = categoryIcons.filter((icon) =>
       similarIconNames.some((similarIconName) =>
         icon.name.startsWith(similarIconName.slice(0, 3))

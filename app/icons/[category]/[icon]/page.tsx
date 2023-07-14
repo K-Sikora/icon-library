@@ -4,14 +4,14 @@ import CopyUrlButton from "@/components/CopyUrlButton";
 import DownloadButton from "@/components/DownloadButton";
 import GoBack from "@/components/GoBack";
 import SimilarIcons from "@/components/SimilarIcons";
-export const categories = ["solid", "brand", "outline", "social"];
+import { categories } from "@/app/constants";
 
 export const dynamicParams = false;
 export async function generateStaticParams() {
   const allIcons: Icons[] = [];
   await Promise.all(
     categories.map(async (category) => {
-      const icons = await getIcons(category);
+      const icons = await getIcons(category.name);
       icons.forEach((icon) => {
         allIcons.push(icon);
       });

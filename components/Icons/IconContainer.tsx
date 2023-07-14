@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 import { Input } from "../ui/input";
 import { BiSearch } from "react-icons/bi";
-import { categories } from "@/app/icons/[category]/[icon]/page";
+import { categories } from "@/app/constants";
 import IconNavLink from "./IconNavLink";
 type Props = {
   icons: Icons[];
@@ -30,8 +30,8 @@ const IconContainer = (props: Props) => {
         <nav className="flex flex-wrap gap-2">
           {categories.map((category) => (
             <IconNavLink
-              key={category}
-              category={category}
+              key={category.name}
+              category={category.name}
             />
           ))}
         </nav>

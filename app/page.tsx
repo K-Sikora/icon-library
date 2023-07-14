@@ -1,50 +1,7 @@
 import Link from "next/link";
 import { getIcons } from "./services/getIcons";
-import {
-  AiOutlineGoogle,
-  AiOutlineTwitter,
-  AiOutlineUser,
-} from "react-icons/ai";
-import { BiSolidUser } from "react-icons/bi";
-const categories = [
-  {
-    name: "brand",
-    icon: (
-      <AiOutlineGoogle
-        className="duration-300 group-hover:text-primary"
-        size={24}
-      />
-    ),
-  },
-  {
-    name: "social",
+import { categories } from "./constants";
 
-    icon: (
-      <AiOutlineTwitter
-        className="duration-300 group-hover:text-primary"
-        size={24}
-      />
-    ),
-  },
-  {
-    name: "solid",
-    icon: (
-      <BiSolidUser
-        className="duration-300 group-hover:text-primary"
-        size={24}
-      />
-    ),
-  },
-  {
-    name: "outline",
-    icon: (
-      <AiOutlineUser
-        className="duration-300 group-hover:text-primary"
-        size={24}
-      />
-    ),
-  },
-];
 export default async function Home() {
   let iconsLength = 0;
 
@@ -63,6 +20,7 @@ export default async function Home() {
       <div className="flex flex-wrap items-center gap-4">
         {categories.map((category) => (
           <Link
+            key={category.name}
             href={`/icons/${category.name}`}
             className="flex items-center justify-center gap-2 px-6 py-2 font-semibold text-black capitalize duration-300 rounded-md bg-primary hover:bg-gray-200 group"
           >
