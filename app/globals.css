@@ -19,7 +19,7 @@
     --border: 220 13% 91%;
     --input: 220 13% 91%;
 
-    --primary: 242 47% 34%;
+    --primary: 200 98% 39%;
     --primary-foreground: 210 20% 98%;
 
     --secondary: 220 14.3% 95.9%;
@@ -74,17 +74,5 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-body {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("/homepage-icons/bg-landing.png");
-  background-attachment: fixed;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    background-attachment: scroll;
   }
 }

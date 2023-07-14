@@ -29,11 +29,11 @@ const IconPage = async ({
   const icon = await getFileByName(params.category, params.icon);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-12 px-4 py-12 md:px-8">
+    <div className="flex flex-col items-center justify-start min-h-screen gap-12 px-4 py-24 md:px-8">
       <GoBack />
       <div
         key={icon.name}
-        className="flex flex-col items-center justify-center gap-2 duration-300 bg-[#695BFF]/30 border-2 rounded-md shadow-md h-36 w-36"
+        className="flex flex-col items-center justify-center gap-2 text-white duration-300 border-2 rounded-md shadow-md shadow-sky-400/20 bg-sky-600 h-36 w-36"
       >
         <img
           alt={`${icon.name} icon`}
