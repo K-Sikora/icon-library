@@ -15,7 +15,7 @@ const Icon = (props: Props) => {
     <Link
       href={`/icons/${category}/${icon.name}`}
       key={icon.name}
-      className="flex flex-col items-center justify-center gap-2 duration-300 border-2 rounded-md shadow-md shadow-sky-400/20 bg-sky-600/95 hover:bg-sky-600/40 backdrop-blur-md hover:border-sky-600 aspect-square"
+      className="flex flex-col items-center justify-center gap-2 duration-300 border-2 rounded-md shadow-md shadow-sky-400/20 bg-sky-600/95 hover:bg-sky-600/40 hover:border-sky-600 aspect-square"
     >
       <img
         className="w-7 h-7 xl:w-8 xl:h-8"

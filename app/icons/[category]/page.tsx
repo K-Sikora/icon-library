@@ -33,7 +33,7 @@ const IconsPage = async (props: Props) => {
             alt="category background"
             fill
             className="z-0 object-cover object-right-top w-full h-full"
-            src="/category/solid.svg"
+            src={`/category/${category}.svg`}
           />
           <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
         </div>
