@@ -3,7 +3,6 @@ import { Icons, getIcons } from "@/app/services/getIcons";
 import CopyUrlButton from "@/components/CopyUrlButton";
 import DownloadButton from "@/components/DownloadButton";
 import GoBack from "@/components/GoBack";
-import SimilarIcons from "@/components/SimilarIcons";
 import { categories } from "@/app/constants";
 
 export const dynamicParams = false;
@@ -51,7 +50,6 @@ const IconPage = async ({
         />
         <DownloadButton icon={icon} />
       </div>
-      <SimilarIcons currentIconName={icon.name} />
     </div>
   );
 };
