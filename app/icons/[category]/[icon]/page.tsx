@@ -1,4 +1,4 @@
-import { getFileByName } from "@/app/services/getIconByName";
+import { getIconByName } from "@/app/services/getIconByName";
 import { Icons, getIcons } from "@/app/services/getIcons";
 import CopyUrlButton from "@/components/CopyUrlButton";
 import DownloadButton from "@/components/DownloadButton";
@@ -25,10 +25,10 @@ const IconPage = async ({
 }: {
   params: { icon: string; category: string };
 }) => {
-  const icon = await getFileByName(params.category, params.icon);
+  const icon = await getIconByName(params.category, params.icon);
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen gap-12 px-4 py-24 md:px-8">
+    <div className="flex flex-col items-center justify-start min-h-screen gap-12 px-4 py-24 -mt-20 md:px-8">
       <GoBack />
       <div
         key={icon.name}
@@ -39,10 +39,10 @@ const IconPage = async ({
           className="w-2/3"
           src={icon.url}
         />
-        <h3 className="w-full h-6 px-3 text-sm font-medium text-center truncate">
-          {icon.name}
-        </h3>
       </div>
+      <h3 className="w-full h-6 px-3 text-sm font-medium text-center text-white">
+        {icon.name}
+      </h3>
       <div className="flex flex-wrap items-center justify-center gap-2">
         <CopyUrlButton
           url={icon.url}

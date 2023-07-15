@@ -10,7 +10,7 @@ const firebaseConfig = {
   appId: process.env.APP_ID,
 };
 
-export async function getFileByName(category: string, fileName: string) {
+export async function getIconByName(category: string, fileName: string) {
   initializeApp(firebaseConfig);
   const storage = getStorage();
 
