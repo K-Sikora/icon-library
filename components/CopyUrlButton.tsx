@@ -8,8 +8,8 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { AiFillCopy, AiOutlineLink } from "react-icons/ai";
-import { BiText } from "react-icons/bi";
+import { AiOutlineLink } from "react-icons/ai";
+import { BiText, BiSolidCopyAlt } from "react-icons/bi";
 type Props = {
   url: string;
   name: string;
@@ -28,10 +28,10 @@ const CopyUrlButton = (props: Props) => {
           className={`${buttonVariants({
             variant: "outline",
             size: "lg",
-          })} h-10 cursor-pointer`}
+          })} h-10 cursor-pointer flex items-center gap-1`}
         >
           Copy
-          <AiFillCopy size={18} />
+          <BiSolidCopyAlt size={18} />
         </MenubarTrigger>
         <MenubarContent>
           <MenubarItem
