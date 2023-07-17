@@ -1,5 +1,6 @@
 import { initializeApp } from "@firebase/app";
 import { getStorage, ref, getDownloadURL } from "@firebase/storage";
+import { type Icon } from "../types/IconType";
 
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
@@ -10,7 +11,10 @@ const firebaseConfig = {
   appId: process.env.APP_ID,
 };
 
-export async function getIconByName(category: string, fileName: string) {
+export async function getIconByName(
+  category: string,
+  fileName: string
+): Promise<Icon> {
   initializeApp(firebaseConfig);
   const storage = getStorage();
 

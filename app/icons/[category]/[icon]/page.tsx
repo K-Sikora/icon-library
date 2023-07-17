@@ -1,13 +1,13 @@
 import { getIconByName } from "@/app/services/getIconByName";
-import { Icons, getIcons } from "@/app/services/getIcons";
+import { getIcons } from "@/app/services/getIcons";
 import CopyUrlButton from "@/components/CopyUrlButton";
 import DownloadButton from "@/components/DownloadButton";
 import GoBack from "@/components/GoBack";
 import { categories } from "@/app/constants";
-
+import { type Icon } from "@/app/types/IconType";
 export const dynamicParams = false;
 export async function generateStaticParams() {
-  const allIcons: Icons[] = [];
+  const allIcons: Icon[] = [];
   await Promise.all(
     categories.map(async (category) => {
       const icons = await getIcons(category.name);
