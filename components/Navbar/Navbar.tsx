@@ -12,7 +12,7 @@ const Navbar = () => {
           just_icons
         </Link>
         <Link
-          href="https://github.com/K-Sikora"
+          href="https://github.com/K-Sikora/icon-library"
           className="text-white"
         >
           <AiFillGithub size={29} />
