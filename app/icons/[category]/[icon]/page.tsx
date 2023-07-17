@@ -49,7 +49,7 @@ const IconPage = async ({
       <GoBack />
       <div
         key={icon.name}
-        className="flex flex-col items-center justify-center gap-2 text-white duration-300 border-2 rounded-md shadow-md shadow-sky-400/20 bg-sky-600 h-36 w-36"
+        className="flex flex-col items-center justify-center gap-2 text-white duration-300 border-2 rounded-md shadow-md shadow-sky-400/20 bg-sky-600 hover:bg-sky-600/50 h-36 w-36"
       >
         <img
           alt={`${icon.name} icon`}

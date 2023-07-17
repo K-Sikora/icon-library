@@ -14,14 +14,15 @@ const SingleIcon = (props: Props) => {
     <Link
       href={`/icons/${category}/${icon.name}`}
       key={icon.name}
-      className="flex flex-col items-center justify-center gap-2 border-2 rounded-md bg-sky-600 aspect-square"
+      className="flex flex-col p-1 items-center justify-center gap-2"
     >
       <img
+        alt={icon.name}
         loading="lazy"
-        className="w-7 h-7 xl:w-8 xl:h-8"
+        className="w-full h-full bg-sky-600 p-2 rounded-md border-2 aspect-square"
         src={icon.url}
       />
-      <h3 className="w-full h-4 px-3 text-xs font-medium text-center text-white truncate">
+      <h3 className="w-full h-7 px-1 text-xs font-medium text-center text-white truncate">
         {icon.name}
       </h3>
     </Link>

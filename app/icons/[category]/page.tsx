@@ -34,7 +34,7 @@ const IconsPage = async (props: Props) => {
   return (
     <main className="gap-6 pb-24">
       <div className="relative w-full h-72">
-        <h2 className="absolute z-20 p-4 text-2xl font-semibold text-white capitalize md:text-4xl md:px-24">
+        <h2 className="absolute z-20 p-4 text-2xl font-semibold text-white capitalize md:text-4xl xl:px-24">
           {category} icons
         </h2>
         <div className="absolute top-0 left-0 w-full h-full">
@@ -47,7 +47,7 @@ const IconsPage = async (props: Props) => {
           <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
         </div>
       </div>
-      <div className="flex flex-col gap-6 px-4 pt-12 md:px-24">
+      <div className="flex flex-col gap-6 px-4 pt-12 xl:px-24">
         <h5 className="font-semibold text-white">
           Browse {icons.length} {category} icons
         </h5>
