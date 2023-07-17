@@ -17,6 +17,15 @@ export function generateStaticParams() {
   ];
 }
 
+export async function generateMetadata(props: Props) {
+  const { category } = props.params;
+  return {
+    title: `just_icons - ${
+      category.charAt(0).toUpperCase() + category.slice(1)
+    }`,
+  };
+}
+
 const IconsPage = async (props: Props) => {
   const { category } = props.params;
 

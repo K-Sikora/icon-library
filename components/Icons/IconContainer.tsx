@@ -1,13 +1,13 @@
 "use client";
-import { Icons } from "@/app/services/getIcons";
-import React, { useState } from "react";
-import Icon from "./Icon";
+import { type Icon } from "@/app/types/IconType";
+import { useState } from "react";
+import SingleIcon from "./SingleIcon";
 import { Input } from "../ui/input";
 import { BiSearch } from "react-icons/bi";
 import { categories } from "@/app/constants";
 import IconNavLink from "./IconNavLink";
 type Props = {
-  icons: Icons[];
+  icons: Icon[];
   category: string;
 };
 
@@ -42,7 +42,7 @@ const IconContainer = (props: Props) => {
             icon.name.toLowerCase().includes(query.toLowerCase())
           )
           .map((icon) => (
-            <Icon
+            <SingleIcon
               key={icon.name}
               icon={icon}
               category={icon.category}

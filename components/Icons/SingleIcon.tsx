@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 type Props = {
   icon: {
@@ -9,7 +8,7 @@ type Props = {
   category: string;
 };
 
-const Icon = (props: Props) => {
+const SingleIcon = (props: Props) => {
   const { icon, category } = props;
   return (
     <Link
@@ -29,4 +28,4 @@ const Icon = (props: Props) => {
   );
 };
 
-export default Icon;
+export default SingleIcon;

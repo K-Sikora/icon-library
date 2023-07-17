@@ -19,6 +19,23 @@ export async function generateStaticParams() {
 
   return allIcons.map((icon) => ({ icon: icon.name, category: icon.category }));
 }
+type Props = {
+  params: {
+    icon: string;
+    category: string;
+  };
+};
+export async function generateMetadata(props: Props) {
+  const icon: Icon = await getIconByName(
+    props.params.category,
+    props.params.icon
+  );
+  if (icon) {
+    return {
+      title: icon.name,
+    };
+  }
+}
 
 const IconPage = async ({
   params,
