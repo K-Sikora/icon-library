@@ -36,7 +36,7 @@ const IconContainer = (props: Props) => {
           ))}
         </nav>
       </div>
-      <div className="grid w-full min-h-screen grid-cols-3 xs:grid-cols-4 gap-2 md:gap-4 place-content-start sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12">
+      <div className="grid w-full min-h-screen grid-cols-3 gap-2 xs:grid-cols-4 md:gap-4 place-content-start sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12">
         {icons
           .filter((icon) =>
             icon.name.toLowerCase().includes(query.toLowerCase())

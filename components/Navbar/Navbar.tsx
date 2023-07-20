@@ -7,14 +7,11 @@ const Navbar = () => {
       <div className="flex items-center justify-between w-full h-full px-4 xl:px-24">
         <Link
           href="/"
-          className="flex items-center justify-center gap-2 italic font-black text-white md:text-lg"
+          className="flex items-center justify-center gap-2 italic font-black md:text-lg"
         >
           just_icons
         </Link>
-        <Link
-          href="https://github.com/K-Sikora/icon-library"
-          className="text-white"
-        >
+        <Link href="https://github.com/K-Sikora/icon-library">
           <AiFillGithub size={29} />
         </Link>
       </div>

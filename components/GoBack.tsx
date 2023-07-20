@@ -9,7 +9,7 @@ const GoBack = () => {
     <Button
       onClick={() => router.back()}
       variant="link"
-      className="flex items-center gap-1 text-base text-white"
+      className="flex items-center gap-1 text-base text-primary-foreground"
     >
       <AiOutlineArrowLeft />
       Go back

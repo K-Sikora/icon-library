@@ -9,7 +9,7 @@ export const categories = [
     name: "brand",
     icon: (
       <AiOutlineGoogle
-        className="duration-300 group-hover:text-primary"
+        className="duration-300 group-hover:text-black/60"
         size={24}
       />
     ),
@@ -19,7 +19,7 @@ export const categories = [
 
     icon: (
       <AiOutlineTwitter
-        className="duration-300 group-hover:text-primary"
+        className="duration-300 group-hover:text-black/60"
         size={24}
       />
     ),
@@ -28,7 +28,7 @@ export const categories = [
     name: "solid",
     icon: (
       <BiSolidUser
-        className="duration-300 group-hover:text-primary"
+        className="duration-300 group-hover:text-black/60"
         size={24}
       />
     ),
@@ -37,7 +37,7 @@ export const categories = [
     name: "outline",
     icon: (
       <AiOutlineUser
-        className="duration-300 group-hover:text-primary"
+        className="duration-300 group-hover:text-black/60"
         size={24}
       />
     ),
