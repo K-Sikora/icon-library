@@ -4,7 +4,11 @@ import { RxArrowTopRight } from "react-icons/rx";
 import CopyUrlButton from "./CopyUrlButton";
 import DownloadButton from "./DownloadButton";
 
-const Features = () => {
+type Props = {
+  formattedLength: string;
+};
+
+const Features = (props: Props) => {
   return (
     <div className="flex flex-col min-h-screen gap-4 px-4 py-40 -z-10 xl:px-24">
       <div className="flex flex-wrap md:flex-nowrap md:h-[600px] gap-4">
@@ -48,7 +52,9 @@ const Features = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 h-full rounded-lg bg-[#FDE255] flex flex-col relative gap-6 pb-40 md:pb-12 p-8">
-          <h2 className="text-3xl font-semibold">Explore over 4,000 icons</h2>
+          <h2 className="text-3xl font-semibold">
+            Explore over {props.formattedLength} icons
+          </h2>
           <p>
             As a hub for vector icons, the website takes immense pride in
             providing you with an expanding library of high quality icons from
@@ -56,7 +62,7 @@ const Features = () => {
             the library is being updated as often as possible to make it even
             bigger.
           </p>
-          <div className="absolute left-0 flex justify-center w-full h-32 md:h-48 bottom-2">
+          <div className="absolute left-0 flex justify-end w-full h-32 lg:justify-center md:h-60 bottom-2">
             <img
               alt=""
               src="/homepage/exploring.svg"
@@ -70,10 +76,10 @@ const Features = () => {
         <h2 className="text-3xl font-semibold">One click download</h2>
         <p>
           Find the icon you need and after one click of a button download will
-          start immediately. No registration, no limits.
+          start immediately. No registration, no limits. It could not be easier.
         </p>
         <div className="flex items-start mt-auto">
-          <div className="flex flex-col items-center gap-4 rounded-lg">
+          <div className="flex flex-col items-center gap-8 rounded-lg">
             <img
               alt="amazon icon"
               className="w-32"
