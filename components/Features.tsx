@@ -83,17 +83,17 @@ const Features = (props: Props) => {
             <img
               alt="amazon icon"
               className="w-32"
-              src="https://firebasestorage.googleapis.com/v0/b/icon-finder-91d39.appspot.com/o/icons%2Fbrand%2FAmazon-bd.svg?alt=media&token=6d470b31-16c4-41f8-823a-2a6d38cc5b73"
+              src="https://firebasestorage.googleapis.com/v0/b/icon-finder-91d39.appspot.com/o/icons%2Fbrand%2Famazon-1.svg?alt=media&token=350384fc-6cc6-4aae-a2a9-70dcc00f0eb0"
             />
             <div className="flex flex-wrap items-center justify-center gap-2">
               <CopyUrlButton
-                url="https://firebasestorage.googleapis.com/v0/b/icon-finder-91d39.appspot.com/o/icons%2Fbrand%2FAmazon-bd.svg?alt=media&token=6d470b31-16c4-41f8-823a-2a6d38cc5b73"
-                name="Amazon-bd.svg"
+                url="https://firebasestorage.googleapis.com/v0/b/icon-finder-91d39.appspot.com/o/icons%2Fbrand%2Famazon-1.svg?alt=media&token=350384fc-6cc6-4aae-a2a9-70dcc00f0eb0"
+                name="amazon-1.svg"
               />
               <DownloadButton
                 icon={{
-                  url: "https://firebasestorage.googleapis.com/v0/b/icon-finder-91d39.appspot.com/o/icons%2Fbrand%2FAmazon-bd.svg?alt=media&token=6d470b31-16c4-41f8-823a-2a6d38cc5b73",
-                  name: "Amazon-bd.svg",
+                  url: "https://firebasestorage.googleapis.com/v0/b/icon-finder-91d39.appspot.com/o/icons%2Fbrand%2Famazon-1.svg?alt=media&token=350384fc-6cc6-4aae-a2a9-70dcc00f0eb0",
+                  name: "amazon-1.svg",
                 }}
               />
             </div>
