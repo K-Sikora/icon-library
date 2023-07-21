@@ -3,7 +3,8 @@
 just_icons is a library for SVG icons built with Next.js, React, Tailwind CSS, and Firebase. It provides a wide range of icons that can be easily sorted by categories and searched by name.
 The project utilizes Static Site Generation (SSG) to generate static routes at build time for every icon.
 
-![just_icons](https://github.com/K-Sikora/icon-library/assets/105585380/ad957515-da18-440e-9aeb-2ad40d18a6ab)
+![1](https://github.com/K-Sikora/icon-library/assets/105585380/9779264a-7a7d-4615-9b43-f283af2d1646)
+
 
 
 ## Live demo
