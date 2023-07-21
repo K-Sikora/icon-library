@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getIcons } from "./services/getIcons";
 import { categories } from "./constants";
 import Features from "@/components/Features";
+import Image from "next/image";
 
 export default async function Home() {
   let iconsLength = 0;
@@ -13,11 +14,10 @@ export default async function Home() {
   const roundedLength = Math.floor(iconsLength / 1000) * 1000;
 
   const formattedLength = roundedLength.toLocaleString();
-
   return (
     <>
-      <main className="relative z-10 bg-[url('/homepage/hero.png')] -mt-24 flex flex-col items-start justify-start w-full min-h-screen px-4 xl:px-24 py-24 md:py-48 bg-no-repeat bg-cover bg-left">
-        <h2 className="z-20 py-4 text-3xl font-bold text-transparent bg-gradient-to-br from-secondary to-secondary/20 md:text-5xl bg-clip-text">
+      <main className="relative z-10 bg-[url('/homepage/hero.png')] -mt-24 flex flex-col items-start justify-start w-full min-h-screen px-4 xl:px-24 py-24 lg:py-48 bg-no-repeat bg-cover bg-left">
+        <h2 className="z-20 py-4 text-3xl font-bold text-transparent bg-gradient-to-br from-secondary to-secondary/20 lg:text-5xl bg-clip-text">
           Vector icons library
         </h2>
 
@@ -37,9 +37,12 @@ export default async function Home() {
             </Link>
           ))}
         </div>
-        <img
+        <Image
           alt=""
-          className="absolute w-56 -translate-x-1/2 drop-shadow-2xl -bottom-20 md:-bottom-24 left-1/2 lg:translate-x-0 lg:left-auto lg:w-80 lg:right-24"
+          width={1471}
+          height={728}
+          priority={true}
+          className="absolute w-56 -translate-x-1/2 drop-shadow-2xl -bottom-28 left-1/2 lg:translate-x-0 lg:left-auto lg:w-80 lg:right-24"
           src="/homepage/mobile.png"
         />
       </main>

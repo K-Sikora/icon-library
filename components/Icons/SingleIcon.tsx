@@ -19,7 +19,7 @@ const SingleIcon = (props: Props) => {
       <img
         alt={icon.name}
         loading="lazy"
-        className="w-full h-full p-2 border-2 rounded-md bg-primary aspect-square"
+        className="w-full h-full p-3 border-2 rounded-md bg-primary aspect-square"
         src={icon.url}
       />
       <h3 className="w-full px-1 text-xs font-medium text-center truncate h-7">

@@ -10,7 +10,7 @@ type Props = {
 
 const Features = (props: Props) => {
   return (
-    <div className="flex flex-col min-h-screen gap-4 px-4 py-40 -z-10 xl:px-24">
+    <div className="flex flex-col min-h-screen gap-4 px-4 py-48 -z-10 xl:px-24">
       <div className="flex flex-wrap md:flex-nowrap md:h-[600px] gap-4">
         <div className="flex flex-col w-full h-full gap-4 md:w-1/2">
           <div className="w-full relative bg-[#20E595] items-start rounded-lg md:h-1/2 flex flex-col gap-6 pb-40 md:pb-12 p-8">
