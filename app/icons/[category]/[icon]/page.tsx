@@ -55,7 +55,7 @@ const IconPage = async ({
         />
       </div>
       <h3 className="w-full h-6 px-3 text-sm font-medium text-center">
-        {icon.name}
+        {icon.name.replace(".svg", "")}
       </h3>
       <div className="flex flex-wrap items-center justify-center gap-2">
         <CopyUrlButton

@@ -23,7 +23,7 @@ const SingleIcon = (props: Props) => {
         src={icon.url}
       />
       <h3 className="w-full px-1 text-xs font-medium text-center truncate h-7">
-        {icon.name}
+        {icon.name.replace(".svg", "")}
       </h3>
     </Link>
   );
