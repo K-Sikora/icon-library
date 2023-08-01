@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${fira_sans.className} bg-white`}>
+      <body className={`${fira_sans.className} bg-white min-w-[300px]`}>
         <Navbar />
         {children}
       </body>
