@@ -1,6 +1,6 @@
 import { initializeApp } from "@firebase/app";
 import { getStorage, ref, getDownloadURL } from "@firebase/storage";
-import { type Icon } from "../types/IconType";
+import { type Icon } from "../types/Icon";
 
 const firebaseConfig = {
   apiKey: process.env.API_KEY,

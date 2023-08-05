@@ -4,7 +4,7 @@ import CopyUrlButton from "@/components/CopyUrlButton";
 import DownloadButton from "@/components/DownloadButton";
 import GoBack from "@/components/GoBack";
 import { categories } from "@/app/constants";
-import { type Icon } from "@/app/types/IconType";
+import type { Icon } from "@/app/types/Icon";
 export const dynamicParams = false;
 export async function generateStaticParams() {
   const allIcons: Icon[] = [];

@@ -1,5 +1,5 @@
 "use client";
-import { type Icon } from "@/app/types/IconType";
+import { type Icon } from "@/app/types/Icon";
 import { useState } from "react";
 import SingleIcon from "./SingleIcon";
 import { Input } from "../ui/input";
